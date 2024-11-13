@@ -1,4 +1,5 @@
 import React from "react";
+import whatsfewa from "@/data/Test.json";
 
 interface PersonCardProps {
   name: string;
@@ -17,9 +18,9 @@ const PersonCard: React.FC<PersonCardProps> = ({ name, age }) => {
 const PeopleCards = () => {
   return (
     <div className="p-4">
-      <PersonCard name="Alice" age={30} />
-      <PersonCard name="Bob" age={25} />
-      <PersonCard name="Charlie" age={20} />
+      {whatsfewa.people.map((person, index) => (
+        <PersonCard key={index} name={person.name} age={person.age} />
+      ))}
     </div>
   );
 };
