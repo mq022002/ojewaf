@@ -1,5 +1,5 @@
 import React from "react";
-import whatsfewa from "@/data/Test.json";
+import whatsfewa from "@/data/test2.json";
 
 interface PersonCardProps {
   name: string;
